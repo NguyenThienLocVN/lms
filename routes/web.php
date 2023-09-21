@@ -1,14 +1,22 @@
 <?php
 
-use Cyaxaress\Payment\Gateways\Gateway;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/test', function () {
-    event(new \Cyaxaress\Payment\Events\PaymentWasSuccessful(new \Cyaxaress\Payment\Models\Payment()));
-//    $gateway = resolve(Gateway::class);
-//    $payment = new \Cyaxaress\Payment\Models\Payment();
-//    $gateway->request($payment);
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 
-//    \Spatie\Permission\Models\Permission::create(['name' => 'manage role_permissions']);
-//    auth()->user()->givePermissionTo(\Cyaxaress\RolePermissions\Models\Permission::PERMISSION_SUPER_ADMIN);
-//    return auth()->user()->assignRole('teacher');
+Route::get('/', function () {
+    return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
