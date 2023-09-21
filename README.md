@@ -2,19 +2,20 @@
 
 # Installation
 ```
-composer create-project cyaxaress/lms
+composer update
 php artisan migrate --seed
+npm install && npm run build
 php artisan serve
 ```
 
 # Demo users
 ```
 Admin:
-username: admin@site.com
+username: admin@admin.com
 password: admin
 ```
 
 # Source
 ```
-https://github.com/cyaxaress/lms
+https://github.com/binshops/laravel-blog
 ```
