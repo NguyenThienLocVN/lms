@@ -9,6 +9,8 @@ php artisan serve
 ```
 
 # Demo users
+Admin panel URI: `/admin`
+Front URI: `/en/blog`
 ```
 Admin:
 username: admin@admin.com
