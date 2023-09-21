@@ -14,7 +14,7 @@ Front URI: `/en/blog`
 ```
 Admin:
 username: admin@admin.com
-password: admin
+password: 12345678
 ```
 
 # Source
